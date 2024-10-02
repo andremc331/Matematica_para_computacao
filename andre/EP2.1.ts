@@ -11,12 +11,14 @@ enum MembrosDaFamilia {
 
 for (let membro in MembrosDaFamilia) {
   if (isNaN(Number(membro))) {
-    continue; // Pula as chaves que são números
+    continue; // Pula as chaves que são strings (nomes dos membros)
   }
   const membroNumero = Number(membro);
   console.log(`Membro ${membroNumero}: ${MembrosDaFamilia[membroNumero]}`);
 }
 
+
+//isNaN é usada para garantir que o código processe apenas os números associados à enumeração e não os nomes dos membros.
 
 //O que é uma enum?
 
