@@ -1,4 +1,3 @@
-//Definição da Enumeração
 
   enum CursosGraduacao {
     DesenvolvimentoDeSoftwareMultiplataforma = 1,
