@@ -1,25 +1,15 @@
-enum CursosGraduacao {
-    DesenvolvimentoDeSoftwareMultiplataforma = "Desenvolvimento de Software Multiplataforma",
-    MeioAmbienteERecursosHídricos = "Meio Ambiente e Recursos Hídricos",
-    Geoprocessamento = "Geoprocessamento",
+//Definição da Enumeração
+
+  enum CursosGraduacao {
+    DesenvolvimentoDeSoftwareMultiplataforma = 1,
+    MeioAmbienteERecursosHídricos,
+    Geoprocessamento,
   }
-  
-  // Exemplo de uso:
-  const meuCurso: CursosGraduacao = CursosGraduacao.DesenvolvimentoDeSoftwareMultiplataforma;
-  console.log(meuCurso); // Saída: Desenvolvimento de Software Multiplataforma
 
-
-  AnáliseEDesenvolvimentoDeSistemas = 1,
-  GestãoDaTecnologiaDaInformação,
-  EngenhariaDaComputação,
-  Logística,
-  ProduçãoIndustrial,
-  ManufaturaAvançada,
-  Marketing,
-  GestãoEmpresarial
-}
-
-// Exemplo de uso:
-const meuCurso: CursosGraduacao = CursosGraduacao.AnáliseEDesenvolvimentoDeSistemas;
-console.log(`Curso selecionado: ${meuCurso} - ${CursosGraduacao[meuCurso]}`);
-// Saída: Curso selecionado: 1 - AnáliseEDesenvolvimentoDeSistemas
+  for (let curso in CursosGraduacao) {
+    if (isNaN(Number(curso))) {
+      continue; // Pula as chaves que são números
+    }
+    const cursoNumero = Number(curso);
+    console.log(`Curso ${cursoNumero}: ${CursosGraduacao[cursoNumero]}`);
+  }

@@ -1,13 +1,24 @@
+//Definição
+
 enum MembrosDaFamilia {
   Pai = 1,
   Mãe,
-  IrmãoMaisVelho,
-  IrmãoDoMeio,
-  IrmãMaisNova,
-  FilhoMaisVelho,
-  FilhoMaisNovo,
+  Irmão,
+  Irmã,
+  Filho,
+  Filha,
 }
 
-// Exemplo de uso:
-const meuParente: MembrosDaFamilia = MembrosDaFamilia.Mãe;
-console.log(`O número correspondente à Mãe é: ${meuParente}`); // Saída: O número correspondente à Mãe é: 2
+for (let membro in MembrosDaFamilia) {
+  if (isNaN(Number(membro))) {
+    continue; // Pula as chaves que são números
+  }
+  const membroNumero = Number(membro);
+  console.log(`Membro ${membroNumero}: ${MembrosDaFamilia[membroNumero]}`);
+}
+
+
+//O que é uma enum?
+
+// A enum é uma maneira de definir um conjunto de valores constantes. 
+// Em vez de trabalhar com valores como números ou strings diretamente, você cria identificadores com significados claros.
