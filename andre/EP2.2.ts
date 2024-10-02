@@ -7,7 +7,7 @@
 
   for (let curso in CursosGraduacao) {
     if (isNaN(Number(curso))) {
-      continue; // Pula as chaves que são números
+      continue;
     }
     const cursoNumero = Number(curso);
     console.log(`Curso ${cursoNumero}: ${CursosGraduacao[cursoNumero]}`);
